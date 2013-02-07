@@ -24,7 +24,7 @@ Add this line to your application's Gemfile:
 
 ### Create the table
 
-    rails generate guinea_pig_migration
+    rails generate guinea_pig:migration
     rake db:migrate
 
 ### Experiment!

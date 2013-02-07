@@ -11,8 +11,8 @@ ActiveRecord::Base.establish_connection(
   :database => "#{File.dirname(__FILE__)}/db/guinea_pig.sqlite"
 )
 
-require_relative "../rails/generators/guinea_pig/templates/create_ab_tests"
-CreateABTests.up
+require_relative "../lib/generators/guinea_pig/templates/create_ab_tests"
+CreateAbTests.up
 
 load("#{File.dirname(__FILE__)}/schema.rb")
 load("#{File.dirname(__FILE__)}/models.rb")

@@ -1,4 +1,4 @@
-class CreateABTests < ActiveRecord::Migration
+class CreateAbTests < ActiveRecord::Migration
   def self.up
     create_table :ab_tests do |t|
       t.string      :experiment, :null => false
