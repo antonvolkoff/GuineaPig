@@ -1,12 +1,12 @@
-# ABTest
+# GuineaPig
 
-Very simple ABTest functionality for Ruby
+Very simple ABTest functionality for Ruby, based in ActiveRecord and with Rails 3 generators
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem "ab_test"
+    gem "guinea_pig"
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ab_test
+    $ gem install guinea_pig
 
 ## Usage
 
@@ -32,23 +32,23 @@ Or install it yourself as:
 
 ### Create the table
 
-    rails generate ab_test_migration
+    rails generate guinea_pig_migration
     rake db:migrate
 
 ### Experiment!
 
 #### LandingPage experiment
 
-    redirect_to ABTest.get(:experiment_monkey, current_user)
+    redirect_to GuineaPig.get(:experiment_monkey, current_user)
 
 #### CSS experiment
 
-    <%= stylesheet_link_tag "/assets/css/#{ABTest.get(:experiment_monkey, current_user)}.css" %>
+    <%= stylesheet_link_tag "/assets/css/#{GuineaPig.get(:experiment_monkey, current_user)}.css" %>
 
 ### Convert!
 
     if user.has_bought_something?
-      ABTest.get(:experiment_monkey, user).conversion!
+      GuineaPig.get(:experiment_monkey, user).conversion!
     end
 
 ## Sate of the art

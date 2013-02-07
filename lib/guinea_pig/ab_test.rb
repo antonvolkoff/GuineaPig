@@ -1,4 +1,4 @@
-module ABTest
+module GuineaPig
   class ABTest < ::ActiveRecord::Base
     before_validation :initialize_alternative, :on => :create
 
@@ -17,7 +17,7 @@ module ABTest
     end
 
     def initialize_alternative
-      self.alternative ||= ::ABTest::Experiments.pick_alternative(experiment)
+      self.alternative ||= ::GuineaPig::Experiments.pick_alternative(experiment)
     end
   end
 end

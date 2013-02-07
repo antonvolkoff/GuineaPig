@@ -1,6 +1,6 @@
 require "rails/generators"
 
-class ABTest::MigrationGenerator < Rails::Generators::Base
+class GuineaPig::MigrationGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
   desc "Generates migration for ABTest model"

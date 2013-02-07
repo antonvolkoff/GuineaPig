@@ -2,16 +2,16 @@ require "minitest/unit"
 require "minitest/autorun"
 require "mocha/setup"
 require "assert_difference"
-require_relative "../lib/ab_test"
+require_relative "../lib/guinea_pig"
 
-FileUtils.rm("#{File.dirname(__FILE__)}/db/ab_test.sqlite")
+FileUtils.rm("#{File.dirname(__FILE__)}/db/guinea_pig.sqlite", :force => true)
 
 ActiveRecord::Base.establish_connection(
   :adapter  => "sqlite3",
-  :database => "#{File.dirname(__FILE__)}/db/ab_test.sqlite"
+  :database => "#{File.dirname(__FILE__)}/db/guinea_pig.sqlite"
 )
 
-require_relative "../rails/generators/ab_test/templates/create_ab_tests"
+require_relative "../rails/generators/guinea_pig/templates/create_ab_tests"
 CreateABTests.up
 
 load("#{File.dirname(__FILE__)}/schema.rb")
