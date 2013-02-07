@@ -8,19 +8,11 @@ Add this line to your application's Gemfile:
 
     gem "guinea_pig"
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install guinea_pig
-
 ## Usage
 
 ### Configure the experiments
 
-    # config/ab_exeperiments.yml
+    # config/ab_experiments.yml
     experiment_monkey:
       - "alternative_monkey_1"
       - "alternative_monkey_2"
