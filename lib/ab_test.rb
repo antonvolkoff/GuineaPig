@@ -1,5 +1,7 @@
-require "ab_test/version"
+require "active_record"
+require_relative "ab_test/version"
+require_relative "ab_test/ab_test"
+require_relative "ab_test/experiments"
 
 module ABTest
-  # Your code goes here...
 end

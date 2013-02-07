@@ -1,0 +1,7 @@
+experiment_monkey:
+  - "alternative_monkey_1"
+  - "alternative_monkey_2"
+
+experiment_elefant:
+  - "alternative_elefant_1"
+  - "alternative_elefant_2"
