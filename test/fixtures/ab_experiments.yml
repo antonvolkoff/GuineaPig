@@ -5,3 +5,4 @@ experiment_monkey:
 experiment_elefant:
   - "alternative_elefant_1"
   - "alternative_elefant_2"
+  - "alternative_elefant_3"

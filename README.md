@@ -1,12 +1,12 @@
 # ABTest
 
-TODO: Write a gem description
+Very simple ABTest functionality for Ruby
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'ab_test'
+    gem "ab_test"
 
 And then execute:
 
@@ -18,12 +18,39 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configure the experiments
 
-## Contributing
+    # config/ab_exeperiments.yml
+    experiment_monkey:
+      - "alternative_monkey_1"
+      - "alternative_monkey_2"
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    experiment_elefant:
+      - "alternative_elefant_1"
+      - "alternative_elefant_2"
+      - "alternative_elefant_3"
+
+### Create the table
+
+    rails generate ab_test_migration
+    rake db:migrate
+
+### Experiment!
+
+#### LandingPage experiment
+
+    redirect_to ABTest.get(:experiment_monkey, current_user)
+
+#### CSS experiment
+
+    <%= stylesheet_link_tag "/assets/css/#{ABTest.get(:experiment_monkey, current_user)}.css" %>
+
+### Convert!
+
+    if user.has_bought_something?
+      ABTest.get(:experiment_monkey, user).conversion!
+    end
+
+## Sate of the art
+
+Beta version but already used in production environments
