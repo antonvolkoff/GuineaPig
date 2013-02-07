@@ -1,5 +1,5 @@
 require "ab_test/version"
 
-module AbTest
+module ABTest
   # Your code goes here...
 end

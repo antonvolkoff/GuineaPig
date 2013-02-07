@@ -1,3 +1,3 @@
-module AbTest
+module ABTest
   VERSION = "0.0.1"
 end

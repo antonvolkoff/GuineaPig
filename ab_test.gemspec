@@ -13,5 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "ab_test"
   gem.require_paths = ["lib"]
-  gem.version       = AbTest::VERSION
+  gem.version       = ABTest::VERSION
+
+  gem.add_development_dependency "mocha", "0.13.0"
 end
