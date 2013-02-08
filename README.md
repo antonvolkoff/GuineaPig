@@ -31,11 +31,11 @@ Add this line to your application's Gemfile:
 
 #### LandingPage experiment
 
-    redirect_to GuineaPig.get(:experiment_monkey, current_user)
+    redirect_to GuineaPig.get(:experiment_monkey, user).alternative
 
 #### CSS experiment
 
-    <%= stylesheet_link_tag "/assets/css/#{GuineaPig.get(:experiment_monkey, current_user)}.css" %>
+    <%= stylesheet_link_tag "/assets/css/#{GuineaPig.get(:experiment_monkey, user).alternative}.css" %>
 
 ### Convert!
 
