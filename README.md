@@ -31,16 +31,16 @@ Add this line to your application's Gemfile:
 
 #### LandingPage experiment
 
-    redirect_to GuineaPig.get(:experiment_monkey, user).alternative
+    redirect_to GuineaPig.alternative(:experiment_monkey, user)
 
 #### CSS experiment
 
-    <%= stylesheet_link_tag "/assets/css/#{GuineaPig.get(:experiment_monkey, user).alternative}.css" %>
+    <%= stylesheet_link_tag "/assets/css/#{GuineaPig.alternative(:experiment_monkey, user)}.css" %>
 
 ### Convert!
 
     if user.has_bought_something?
-      GuineaPig.get(:experiment_monkey, user).conversion!
+      GuineaPig.conversion(:experiment_monkey, user)
     end
 
 ## Sate of the art
